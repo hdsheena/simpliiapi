@@ -219,11 +219,15 @@ def sign_in(
     imap_server=None,
     imap_folder="INBOX",
     beta=False,
+    simplii=False
 ):
     if beta:
         url = constants.MINT_BETA_ROOT_URL
     else:
-        url = constants.MINT_ROOT_URL
+        if simplii:
+            url = constants.SIMPLII_ROOT_URL
+        else:    
+            url = constants.MINT_ROOT_URL
     """
     Takes in a web driver and gets it through the Mint sign in process
     """

@@ -14,6 +14,10 @@ CREDIT_REPORT_KEY = "Credit_Report"
 TRENDS_KEY = "Trend"
 
 MINT_ROOT_URL = "https://mint.intuit.com"
+# https://online.simplii.com/ebm-resources/public/client/web/index.html
+SIMPLII_ROOT_URL = "https://online.simplii.com"
+# https://online.simplii.com/ebm-ai/api/v2/json/accounts
+SIMPLII_ACCOUNTS_URL = "https://online.simplii.com/ebm-ai/api/v2/json/accounts"
 MINT_BETA_ROOT_URL = "https://beta.mint.intuit.com"
 MINT_CREDIT_URL = "https://credit.finance.intuit.com"
 

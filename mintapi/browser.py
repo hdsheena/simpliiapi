@@ -48,6 +48,7 @@ class SeleniumBrowser(MintEndpoints):
         driver=None,
         beta=False,
         quit_driver_on_fail=True,
+        simplii=False
     ):
         self.driver = None
         self.status_message = None
@@ -74,6 +75,7 @@ class SeleniumBrowser(MintEndpoints):
                 chromedriver_download_path=chromedriver_download_path,
                 driver=driver,
                 beta=beta,
+                simplii=simplii
             )
 
     """
@@ -109,6 +111,7 @@ class SeleniumBrowser(MintEndpoints):
         chromedriver_download_path=os.getcwd(),
         driver=None,
         beta=False,
+        simplii=False
     ):
         self.driver = driver or _create_web_driver_at_mint_com(
             headless,
@@ -134,6 +137,7 @@ class SeleniumBrowser(MintEndpoints):
                 imap_server,
                 imap_folder,
                 beta,
+                simplii
             )
         except Exception as e:
             msg = f"Could not sign in to Mint. Current page: {self.driver.current_url}"
