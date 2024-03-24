@@ -3,7 +3,7 @@ Transactions helper classes
 """
 
 from dataclasses import dataclass
-from mintapi.filters import SearchFilter, DateFilter
+from simpliiapi.filters import SearchFilter, DateFilter
 
 
 @dataclass

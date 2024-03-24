@@ -1,7 +1,7 @@
 import logging
 
-from mintapi.api import *
-from mintapi.signIn import *
+from simpliiapi.api import *
+from simpliiapi.signIn import *
 
 
-logging.getLogger("mintapi").setLevel(logging.INFO)
+logging.getLogger("simpliiapi").setLevel(logging.INFO)

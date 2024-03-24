@@ -4,11 +4,11 @@ Selenium Browser
 import logging
 import os
 
-from mintapi.constants import JSON_HEADER, MINT_CREDIT_URL
-from mintapi.endpoints import MintEndpoints
-from mintapi.signIn import _create_web_driver_at_mint_com, sign_in
+from simpliiapi.constants import JSON_HEADER, MINT_CREDIT_URL
+from simpliiapi.endpoints import MintEndpoints
+from simpliiapi.signIn import _create_web_driver_at_mint_com, sign_in
 
-logger = logging.getLogger("mintapi")
+logger = logging.getLogger("simpliiapi")
 
 
 def reverse_credit_amount(row):

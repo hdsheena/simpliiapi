@@ -1,6 +1,6 @@
 import os
 from datetime import datetime
-from mintapi import constants, exceptions
+from simpliiapi import constants, exceptions
 import email
 import email.header
 import imaplib
@@ -26,7 +26,7 @@ from seleniumrequests import Chrome
 
 import oathtool
 
-logger = logging.getLogger("mintapi")
+logger = logging.getLogger("simpliiapi")
 
 
 class MFAMethodNotAvailableError(RuntimeError):

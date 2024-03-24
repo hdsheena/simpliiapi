@@ -7,7 +7,7 @@ from typing import Dict, List, Optional, Union
 
 from requests import Session
 
-from mintapi.endpoints import MintEndpoints
+from simpliiapi.endpoints import MintEndpoints
 
 LOGGER = logging.getLogger(__name__)
 

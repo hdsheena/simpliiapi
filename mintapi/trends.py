@@ -5,7 +5,7 @@ Trends helper classes
 from dataclasses import dataclass
 from enum import Enum
 from typing import Union
-from mintapi.filters import SearchFilter, DateFilter
+from simpliiapi.filters import SearchFilter, DateFilter
 
 
 @dataclass

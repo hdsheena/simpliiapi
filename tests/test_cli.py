@@ -1,8 +1,8 @@
 import tempfile
 import unittest
 
-from mintapi.cli import format_filename, parse_arguments
-from mintapi.constants import ACCOUNT_KEY, TRANSACTION_KEY
+from simpliiapi.cli import format_filename, parse_arguments
+from simpliiapi.constants import ACCOUNT_KEY, TRANSACTION_KEY
 
 
 class CLIOutputTests(unittest.TestCase):

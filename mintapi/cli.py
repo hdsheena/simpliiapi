@@ -7,8 +7,8 @@ import sys
 
 import configargparse
 import keyring
-from mintapi.api import Mint
-from mintapi.constants import (
+from simpliiapi.api import Mint
+from simpliiapi.constants import (
     ACCOUNT_KEY,
     BILL_KEY,
     BUDGET_KEY,
@@ -26,12 +26,12 @@ from mintapi.constants import (
     TRENDS_KEY,
     ACCOUNT_BALANCE_HISTORY_KEY,
 )
-from mintapi.filters import DateFilter
-from mintapi.signIn import get_email_code
-from mintapi.trends import ReportView
+from simpliiapi.filters import DateFilter
+from simpliiapi.signIn import get_email_code
+from simpliiapi.trends import ReportView
 from pandas import json_normalize
 
-logger = logging.getLogger("mintapi")
+logger = logging.getLogger("simpliiapi")
 
 
 def parse_arguments(args):
@@ -297,8 +297,8 @@ def parse_arguments(args):
             ("--session-path",),
             {
                 "nargs": "?",
-                "default": os.path.join(os.path.expanduser("~"), ".mintapi", "session"),
-                "help": "Directory to save browser session, including cookies. Used to prevent repeated MFA prompts. Defaults to $HOME/.mintapi/session.  Set to None to use a temporary profile.",
+                "default": os.path.join(os.path.expanduser("~"), ".simpliiapi", "session"),
+                "help": "Directory to save browser session, including cookies. Used to prevent repeated MFA prompts. Defaults to $HOME/.simpliiapi/session.  Set to None to use a temporary profile.",
             },
         ),
         # Displayed to the user as a postive switch, but processed back here as a negative
@@ -462,12 +462,12 @@ def main():
         email = input("Mint e-mail: ")
 
     password = handle_password(
-        "mintapi", "Mint password: ", email, password, options.keyring
+        "simpliiapi", "Mint password: ", email, password, options.keyring
     )
 
     if imap_account:
         imap_password = handle_password(
-            "mintapi_imap",
+            "simpliiapi_imap",
             "IMAP password: ",
             imap_account,
             imap_password,

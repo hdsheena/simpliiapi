@@ -1,7 +1,7 @@
 from typing import Dict, List, Optional, Union
 
-from mintapi.browser import SeleniumBrowser
-from mintapi.rest import RESTClient
+from simpliiapi.browser import SeleniumBrowser
+from simpliiapi.rest import RESTClient
 
 
 class Mint(object):

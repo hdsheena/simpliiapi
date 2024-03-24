@@ -8,15 +8,15 @@ import sys
 import unittest
 from unittest.mock import patch
 
-import mintapi.browser
+import simpliiapi.browser
 import pytest
-from mintapi.api import Mint
-from mintapi.browser import SeleniumBrowser
-from mintapi.rest import RESTClient
+from simpliiapi.api import Mint
+from simpliiapi.browser import SeleniumBrowser
+from simpliiapi.rest import RESTClient
 
 
 class MintApiTests(unittest.TestCase):
-    @patch("mintapi.api.SeleniumBrowser")
+    @patch("simpliiapi.api.SeleniumBrowser")
     def test_constructor_browser_with_kwargs(self, mock_browser_class):
         """
         if use_rest_client = False the email and password keyword arguments
@@ -27,7 +27,7 @@ class MintApiTests(unittest.TestCase):
         Mint(email=email, password=password, use_rest_client=False)
         mock_browser_class.assert_called_once_with(email=email, password=password)
 
-    @patch("mintapi.api.SeleniumBrowser")
+    @patch("simpliiapi.api.SeleniumBrowser")
     def test_constructor_browser_with_args(self, mock_browser_class):
         """
         if use_rest_client = False the email and password positional arguments
@@ -38,7 +38,7 @@ class MintApiTests(unittest.TestCase):
         Mint(email, password, use_rest_client=False)
         mock_browser_class.assert_called_once_with(email=email, password=password)
 
-    @patch("mintapi.api.SeleniumBrowser")
+    @patch("simpliiapi.api.SeleniumBrowser")
     def test_constructor_rest_client_with_kwargs(self, mock_browser_class):
         """
         if use_rest_client = True the email and password keyword arguments
@@ -49,7 +49,7 @@ class MintApiTests(unittest.TestCase):
         Mint(email=email, password=password, use_rest_client=True)
         mock_browser_class.assert_called_once_with(email=email, password=password)
 
-    @patch("mintapi.api.SeleniumBrowser")
+    @patch("simpliiapi.api.SeleniumBrowser")
     def test_constructor_rest_client_with_args(self, mock_browser_class):
         """
         if use_rest_client = True the email and password positional arguments
@@ -101,8 +101,8 @@ class MintApiTests(unittest.TestCase):
         )
         self.assertEqual(api.browser.__class__, SeleniumBrowser)
 
-    @patch.object(mintapi.browser.SeleniumBrowser, "_get_api_key_header")
-    @patch.object(mintapi.browser.SeleniumBrowser, "_get_cookies")
+    @patch.object(simpliiapi.browser.SeleniumBrowser, "_get_api_key_header")
+    @patch.object(simpliiapi.browser.SeleniumBrowser, "_get_cookies")
     def test_auth_transfer(self, browser_cookie, browser_header):
         browser_header.return_value = {"authorization": "abc123"}
         browser_cookie.return_value = "fudge"

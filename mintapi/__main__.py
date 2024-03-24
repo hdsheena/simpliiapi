@@ -1,4 +1,4 @@
-from mintapi.cli import main
+from simpliiapi.cli import main
 
 
 if __name__ == "__main__":

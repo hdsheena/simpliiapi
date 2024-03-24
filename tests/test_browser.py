@@ -1,14 +1,14 @@
 import unittest
 from unittest.mock import patch
 
-import mintapi.browser
-from mintapi.browser import SeleniumBrowser
+import simpliiapi.browser
+from simpliiapi.browser import SeleniumBrowser
 
 
 class BrowserSignInTests(unittest.TestCase):
-    @patch.object(mintapi.browser, "_create_web_driver_at_mint_com")
-    @patch.object(mintapi.browser, "logger")
-    @patch.object(mintapi.browser, "sign_in")
+    @patch.object(simpliiapi.browser, "_create_web_driver_at_mint_com")
+    @patch.object(simpliiapi.browser, "logger")
+    @patch.object(simpliiapi.browser, "sign_in")
     def test_when_sign_in_fails_then_logs_exception(
         self, mock_sign_in, mock_logger, *_
     ):

@@ -8,16 +8,16 @@ with open(readme, "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="mintapi",
+    name="simpliiapi",
     description="a screen-scraping API for Mint.com",
     long_description=long_description,
     long_description_content_type="text/markdown",
     version="2.15",
-    packages=["mintapi"],
+    packages=["simpliiapi"],
     license="The MIT License",
     author="Michael Rooney",
-    author_email="mrooney.mintapi@rowk.com",
-    url="https://github.com/mintapi/mintapi",
+    author_email="mrooney.simpliiapi@rowk.com",
+    url="https://github.com/simpliiapi/simpliiapi",
     install_requires=[
         "configargparse",
         "oathtool",
@@ -31,7 +31,7 @@ setuptools.setup(
     python_requires=">=3.6",
     entry_points=dict(
         console_scripts=[
-            "mintapi = mintapi.cli:main",
+            "simpliiapi = simpliiapi.cli:main",
         ],
     ),
 )

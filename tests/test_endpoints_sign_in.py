@@ -2,8 +2,8 @@ import os
 import sys
 
 import pytest
-from mintapi.browser import SeleniumBrowser
-from mintapi.signIn import _create_web_driver_at_mint_com, sign_in
+from simpliiapi.browser import SeleniumBrowser
+from simpliiapi.signIn import _create_web_driver_at_mint_com, sign_in
 from tests.sample_endpoint_payloads import category_example
 
 USERNAME = os.environ.get("MINTAPI_USERNAME", None)

@@ -6,7 +6,7 @@ Focuses on client instantiation and request construction - not endpoint data
 import unittest
 
 import pytest
-from mintapi.rest import RESTClient
+from simpliiapi.rest import RESTClient
 
 
 class RestAuthTests(unittest.TestCase):

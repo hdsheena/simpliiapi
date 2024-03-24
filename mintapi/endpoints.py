@@ -11,10 +11,10 @@ from typing import List, Optional
 from urllib.parse import parse_qs, urlparse
 
 import pandas as pd
-from mintapi.constants import MINT_CREDIT_URL, MINT_ROOT_URL
-from mintapi.filters import DateFilter, SearchFilterBuilder
-from mintapi.transactions import TransactionRequest
-from mintapi.trends import ReportView, TrendRequest
+from simpliiapi.constants import MINT_CREDIT_URL, MINT_ROOT_URL
+from simpliiapi.filters import DateFilter, SearchFilterBuilder
+from simpliiapi.transactions import TransactionRequest
+from simpliiapi.trends import ReportView, TrendRequest
 from requests import Response
 
 LOGGER = logging.getLogger(__name__)

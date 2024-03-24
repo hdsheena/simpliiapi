@@ -7,9 +7,9 @@ import sys
 import unittest
 from unittest.mock import patch
 
-import mintapi.endpoints
+import simpliiapi.endpoints
 import pytest
-from mintapi.endpoints import MintEndpoints
+from simpliiapi.endpoints import MintEndpoints
 
 
 class PaginationTests(unittest.TestCase):
@@ -79,7 +79,7 @@ class PaginationTests(unittest.TestCase):
             }
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
     def test_missing_data_key(self, _):
         """
@@ -98,7 +98,7 @@ class PaginationTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
     def test_missing_metadata_key(self, _):
         """
@@ -120,9 +120,9 @@ class PaginationTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_metadata_next_handling(self, mock_request, _):
         """
         Should recurse
@@ -164,9 +164,9 @@ class EndpointRequestTests(unittest.TestCase):
     """
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_account_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -188,9 +188,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_budget_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -212,9 +212,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_bills_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -236,9 +236,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_category_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -260,9 +260,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_tag_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -284,9 +284,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_rule_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -308,9 +308,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_credit_account_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -332,9 +332,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_credit_inquiries_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -356,9 +356,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_credit_reports_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -380,9 +380,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_credit_utilization_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -404,9 +404,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_investment_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -428,9 +428,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_transaction_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
@@ -452,9 +452,9 @@ class EndpointRequestTests(unittest.TestCase):
         )
 
     @patch.object(
-        mintapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
+        simpliiapi.endpoints.MintEndpoints, "__abstractmethods__", new_callable=set
     )
-    @patch.object(mintapi.endpoints.MintEndpoints, "request")
+    @patch.object(simpliiapi.endpoints.MintEndpoints, "request")
     def test_trend_endpoint(self, mock_request, _):
         """
         Tests params are correctly passed to the request method
